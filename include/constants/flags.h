@@ -42,13 +42,13 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_UNUSED_0x020    0x20 // Unused Flag
-#define FLAG_UNUSED_0x021    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
+#define FLAG_ROUTE_101_OPEN   0x20 // EF: Route 101 event tracking flag
+#define FLAG_ITEM_ROUTE_101_POKE_BALL    0x21 // EF: Pokeball in lower 101
+#define FLAG_ITEM_ROUTE_101_POKE_BALL_2    0x22 // EF: Pokeball in mid 101
+#define FLAG_ITEM_ROUTE_101_ANTIDOTE    0x23 // EF: Antidote in 101
+#define FLAG_ITEM_ROUTE_101_POTION    0x24 // EF: Potion in upper 101
+#define FLAG_ITEM_ROUTE_101_WATER_STONE    0x25 // EF: Water Stone in upper 101 (requires Surf)
+#define FLAG_HIDDEN_ITEM_ROUTE_101_NET_BALL    0x26 // EF: Hidden Net Ball in upper 101 (requires Surf)
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag

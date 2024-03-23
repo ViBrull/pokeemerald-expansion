@@ -24,8 +24,8 @@ Route101_EventScript_StartBirchRescue::
 	playbgm MUS_HELP, TRUE
 	msgbox Route101_Text_HelpMe, MSGBOX_DEFAULT
 	closemessage
-	setobjectxy LOCALID_BIRCH, 0, 15
-	setobjectxy LOCALID_ZIGZAGOON, 0, 16
+	setobjectxy LOCALID_BIRCH, 16, 45
+	setobjectxy LOCALID_ZIGZAGOON, 16, 46
 	applymovement OBJ_EVENT_ID_PLAYER, Route101_Movement_EnterScene
 	applymovement LOCALID_BIRCH, Route101_Movement_BirchRunAway1
 	applymovement LOCALID_ZIGZAGOON, Route101_Movement_ZigzagoonChase1
@@ -207,8 +207,11 @@ Route101_Movement_Unused2:
 	step_end
 
 Route101_EventScript_Youngster::
-	msgbox Route101_Text_TakeTiredPokemonToPokeCenter, MSGBOX_NPC
+	msgbox Route101_Text_LongWayToOdale, MSGBOX_NPC
 	end
+
+Route101_EventScript_Camper::
+	msgbox Route101_Text_StuckCamping, MSGBOX_NPC
 
 Route101_EventScript_Boy::
 	msgbox Route101_Text_WildPokemonInTallGrass, MSGBOX_NPC
@@ -284,11 +287,12 @@ Route101_Text_YouSavedMe:
 	.string "This is not the place to chat, so come\n"
 	.string "by my POKéMON LAB later, okay?$"
 
-Route101_Text_TakeTiredPokemonToPokeCenter:
-	.string "If POKéMON get tired, take them to\n"
-	.string "a POKéMON CENTER.\p"
-	.string "There's a POKéMON CENTER in OLDALE\n"
-	.string "TOWN right close by.$"
+Route101_Text_LongWayToOdale:
+	.string "This is the way to ODALE TOWN!\p"
+	.string "…but there are LITTLE TREES blocking\n"
+	.string "the way back. I'm scared to jump\p"
+	.string "because I'm not sure I can make\n"
+	.string "it all the way…$"
 
 Route101_Text_WildPokemonInTallGrass:
 	.string "Wild POKéMON will jump out at you in\n"
@@ -300,3 +304,8 @@ Route101_Text_RouteSign:
 	.string "ROUTE 101\n"
 	.string "{UP_ARROW} OLDALE TOWN$"
 
+Route101_Text_StuckCamping:
+	.string "I was camping on ROUTE 101, but\n"
+	.string "now I'm stuck out here.\p"
+	.string "Where is the GARDENER? They're\n"
+	.string "supposed to keep the path clear!$"
