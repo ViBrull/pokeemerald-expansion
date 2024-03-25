@@ -1660,6 +1660,10 @@ extern const u32 gItemIconPalette_TeraOrb[];
 extern const u32 gItemIcon_TinyBambooShoot[];
 extern const u32 gItemIconPalette_TinyBambooShoot[];
 
+// EF: Items
+extern const u32 gItemIcon_GardenerShears[];
+extern const u32 gItemIconPalette_GardenerShears[];
+
 // Tera Shards
 extern const u32 gItemIcon_TeraShard[];
 extern const u32 gItemIconPalette_NormalTeraShard[];

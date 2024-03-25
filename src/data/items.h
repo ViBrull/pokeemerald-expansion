@@ -11233,6 +11233,23 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
+// EF: Key Items
+
+    [ITEM_GARDENER_SHEARS] =
+    {
+        .name = _("Sharp Shears"),
+        .pluralName = _("Sharp Shears"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Shears which a\n"
+            "GARDENER could use\n"
+            "to cut small trees."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
 // Story Key Items
 
     [ITEM_SS_TICKET] =

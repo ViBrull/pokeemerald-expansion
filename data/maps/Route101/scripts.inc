@@ -1,5 +1,6 @@
 .set LOCALID_BIRCH, 2
 .set LOCALID_ZIGZAGOON, 4
+.set LOCALID_GARDENER, 19
 
 Route101_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route101_OnTransition
@@ -21,6 +22,7 @@ Route101_EventScript_HideMapNamePopup::
 
 Route101_EventScript_StartBirchRescue::
 	lockall
+	setflag FLAG_HIDE_ROUTE_101_NORTH_GARDENER
 	playbgm MUS_HELP, TRUE
 	msgbox Route101_Text_HelpMe, MSGBOX_DEFAULT
 	closemessage
@@ -212,6 +214,7 @@ Route101_EventScript_Youngster::
 
 Route101_EventScript_Camper::
 	msgbox Route101_Text_StuckCamping, MSGBOX_NPC
+	end
 
 Route101_EventScript_Boy::
 	msgbox Route101_Text_WildPokemonInTallGrass, MSGBOX_NPC
@@ -221,6 +224,10 @@ Route101_EventScript_RouteSign::
 	msgbox Route101_Text_RouteSign, MSGBOX_SIGN
 	end
 
+Route101_EventScript_LittleTree::
+	msgbox Route101_Text_LittleTree, MSGBOX_DEFAULT
+	end
+
 Route101_EventScript_BirchsBag::
 	lock
 	faceplayer
@@ -228,7 +235,7 @@ Route101_EventScript_BirchsBag::
 	setflag FLAG_RESCUED_BIRCH
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_ZIGZAGOON
-	setobjectxy OBJ_EVENT_ID_PLAYER, 6, 13
+	setobjectxy OBJ_EVENT_ID_PLAYER, 22, 43
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	special ChooseStarter
@@ -263,6 +270,20 @@ Route101_Movement_BirchApproachPlayer:
 	walk_right
 	step_end
 
+Route101_EventScript_GardenerInitial::
+	msgbox Route101_Text_LostMyShears, MSGBOX_NPC
+	goto_if_set FLAG_OBTAINED_SHEARS, Route101_EventScript_GardenerTakesShears
+	end
+
+Route101_EventScript_GardenerTakesShears::
+	msgbox Route101_Text_FoundMyShears, MSGBOX_NPC
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_GARDENER
+	setflag FLAG_ROUTE_101_OPEN
+	clearflag FLAG_HIDE_ROUTE_101_NORTH_GARDENER
+	fadescreen FADE_FROM_BLACK
+	end
+
 Route101_Text_HelpMe:
 	.string "H-help me!$"
 
@@ -288,7 +309,7 @@ Route101_Text_YouSavedMe:
 	.string "by my POKéMON LAB later, okay?$"
 
 Route101_Text_LongWayToOdale:
-	.string "This is the way to ODALE TOWN!\p"
+	.string "This is the way to OLDALE TOWN!\p"
 	.string "…but there are LITTLE TREES blocking\n"
 	.string "the way back. I'm scared to jump\p"
 	.string "because I'm not sure I can make\n"
@@ -309,3 +330,19 @@ Route101_Text_StuckCamping:
 	.string "now I'm stuck out here.\p"
 	.string "Where is the GARDENER? They're\n"
 	.string "supposed to keep the path clear!$"
+
+Route101_Text_LittleTree:
+	.string "This LITTLE TREE is blocking the path.\n"
+	.string "Maybe you could find a way around?$"
+
+Route101_Text_LostMyShears:
+	.string "GARDENER JUDE: I was going to clear\n"
+	.string "the LITTLE TREES from the ROUTE…\p"
+	.string "…but a MANKEY stole my SHEARS!!\p"
+	.string "I don't know which way it ran off…$"
+
+Route101_Text_FoundMyShears:
+	.string "Oh! My SHEARS!\n"
+	.string "Thank you for finding them!\p"
+	.string "I'll go clear the path to OLDALE\n"
+	.string "TOWN right away!$"

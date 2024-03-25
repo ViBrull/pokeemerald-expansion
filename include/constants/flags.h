@@ -49,8 +49,8 @@
 #define FLAG_ITEM_ROUTE_101_POTION    0x24 // EF: Potion in upper 101
 #define FLAG_ITEM_ROUTE_101_WATER_STONE    0x25 // EF: Water Stone in upper 101 (requires Surf)
 #define FLAG_HIDDEN_ITEM_ROUTE_101_NET_BALL    0x26 // EF: Hidden Net Ball in upper 101 (requires Surf)
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
+#define FLAG_OBTAINED_SHEARS    0x27 // EF: Tracks whether player has Gardener's Shears key item
+#define FLAG_HIDE_ROUTE_101_NORTH_GARDENER    0x28 // EF: Hides gardener north position until they move
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag
