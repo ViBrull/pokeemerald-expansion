@@ -281,6 +281,7 @@ Route101_EventScript_GardenerInitial::
 	end
 
 Route101_EventScript_GardenerTakesShears::
+	lock
 	msgbox Route101_Text_FoundMyShears, MSGBOX_NPC
 	setvar VAR_0x8004, ITEM_GARDENER_SHEARS
 	call Common_EventScript_PlayerHandedOverTheItem
@@ -289,6 +290,7 @@ Route101_EventScript_GardenerTakesShears::
 	setflag FLAG_ROUTE_101_OPEN
 	clearflag FLAG_HIDE_ROUTE_101_NORTH_GARDENER
 	fadescreen FADE_FROM_BLACK
+	release
 	end
 
 Route101_Text_HelpMe:
