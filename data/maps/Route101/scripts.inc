@@ -226,6 +226,11 @@ Route101_EventScript_RouteSign::
 
 Route101_EventScript_LittleTree::
 	msgbox Route101_Text_LittleTree, MSGBOX_DEFAULT
+	closemessage
+	end
+
+Route101_EventScript_GardenerNorth::
+	msgbox Route101_Text_CutTrees, MSGBOX_NPC
 	end
 
 Route101_EventScript_BirchsBag::
@@ -277,6 +282,8 @@ Route101_EventScript_GardenerInitial::
 
 Route101_EventScript_GardenerTakesShears::
 	msgbox Route101_Text_FoundMyShears, MSGBOX_NPC
+	setvar VAR_0x8004, ITEM_GARDENER_SHEARS
+	call Common_EventScript_PlayerHandedOverTheItem
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_GARDENER
 	setflag FLAG_ROUTE_101_OPEN
@@ -346,3 +353,8 @@ Route101_Text_FoundMyShears:
 	.string "Thank you for finding them!\p"
 	.string "I'll go clear the path to OLDALE\n"
 	.string "TOWN right away!$"
+
+Route101_Text_CutTrees:
+	.string "Thanks again for finding my SHEARS!\p"
+	.string "I cut down the LITTLE TREES on the path\n"
+	.string "between LITTLEROOT and OLDALE.$"
