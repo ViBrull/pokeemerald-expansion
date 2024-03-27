@@ -197,8 +197,20 @@ Route103_EventScript_Man::
 	msgbox Route103_Text_ShortcutToOldale, MSGBOX_NPC
 	end
 
-Route103_EventScript_RouteSign::
-	msgbox Route103_Text_RouteSign, MSGBOX_SIGN
+Route103_EventScript_Hiker::
+	msgbox Route103_Text_TangelaCaveHiker, MSGBOX_NPC
+	end
+
+Route103_EventScript_RouteSignSouth::
+	msgbox Route103_Text_RouteSignSouth, MSGBOX_SIGN
+	end
+
+Route103_EventScript_RouteSignNorth::
+	msgbox Route103_Text_RouteSignNorth, MSGBOX_SIGN
+	end
+
+Route103_EventScript_HiddenItemAdviceSign::
+	msgbox Route103_Text_HiddenItemAdvice, MSGBOX_SIGN
 	end
 
 Route103_EventScript_Daisy::
@@ -349,7 +361,24 @@ Route103_Text_ShortcutToOldale:
 	.string "it'll be a shortcut to OLDALE TOWN.\p"
 	.string "Fufufu, that's useful, isn't it?$"
 
-Route103_Text_RouteSign:
-	.string "ROUTE 103\n"
+Route103_Text_RouteSignSouth:
+	.string "ROUTE 103\p"
+	.string "{UP_ARROW} TANGELA CAVE\n"
 	.string "{DOWN_ARROW} OLDALE TOWN$"
+
+Route103_Text_RouteSignNorth:
+	.string "ROUTE 103\n"
+	.string "{UP_ARROW} TANGELA CAVE$"
+
+Route103_Text_TangelaCaveHiker:
+	.string "If you're planning to travel through\n"
+	.string "TANGELA CAVE, be careful!\p"
+	.string "It's easy to get lost if you don't\n"
+	.string "know the way.$"
+
+Route103_Text_HiddenItemAdvice:
+	.string "Sometimes items are hidden on the\n"
+	.string "ground.\p" 
+	.string "Try pressing 'A' to search the ground\n"
+	.string "in front of you.$"
 

@@ -1073,3 +1073,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/birch_speech.inc"
 
 	.include "data/maps/Route101Underground/scripts.inc"
+
+	.include "data/maps/TangelaCave/scripts.inc"

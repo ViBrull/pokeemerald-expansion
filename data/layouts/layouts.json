@@ -184,8 +184,8 @@
     {
       "id": "LAYOUT_ROUTE103",
       "name": "Route103_Layout",
-      "width": 80,
-      "height": 22,
+      "width": 100,
+      "height": 37,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route103/border.bin",
@@ -4420,6 +4420,16 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Route101Underground/border.bin",
       "blockdata_filepath": "data/layouts/Route101Underground/map.bin"
+    },
+    {
+      "id": "LAYOUT_TANGELA_CAVE",
+      "name": "TangelaCave_Layout",
+      "width": 54,
+      "height": 106,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/TangelaCave/border.bin",
+      "blockdata_filepath": "data/layouts/TangelaCave/map.bin"
     }
   ]
 }
